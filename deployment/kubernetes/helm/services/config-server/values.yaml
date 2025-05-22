@@ -1,0 +1,19 @@
+serviceName: config-server
+appName: configserver
+
+replicaCount: 1
+
+image: 868497626916.dkr.ecr.us-east-1.amazonaws.com/config-server:latest
+
+ports:
+  - 8071
+  - 8078
+
+service:
+  ports:
+    - 8071
+    - 8078
+
+memory: "256Mi"
+cpu: "0.25"
+cpuLimit: "0.25"

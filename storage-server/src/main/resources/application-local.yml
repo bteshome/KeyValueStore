@@ -1,0 +1,56 @@
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: 'false'
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  codec:
+    max-in-memory-size: 10MB
+
+debug: 'false'
+
+management:
+  server:
+    ssl:
+      enabled: 'false'
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: 'true'
+  endpoint:
+    shutdown:
+      enabled: 'true'
+    health:
+      probes:
+        enabled: 'true'
+      show-details: always
+  health:
+    liveness-state:
+      enabled: 'true'
+    readiness-state:
+      enabled: 'true'
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+endpoints:
+  shutdown:
+    enabled: 'true'
+
+logging:
+  level:
+    com:
+      bteshome: TRACE
+    root: INFO
+    org:
+      apache:
+        ratis: INFO
+
+
+

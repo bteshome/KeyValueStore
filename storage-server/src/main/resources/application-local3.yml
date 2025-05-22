@@ -1,0 +1,40 @@
+server:
+  port: '9606'
+
+management:
+  server:
+    port: '9608'
+
+storage:
+  node:
+    id: '3'
+    host: localhost
+    port: ${server.port}
+    grpc-port: 9607
+    management-port: ${management.server.port}
+    rack: ""
+    storage-dir: storage-server-3
+  grpc-enabled: 'true'
+
+metadata-client:
+  client-id: 2ac5a91b-b439-4c52-9617-bdc4f3683c97
+  group-id: d7d23a0d-26f1-46ce-b10b-af833738907e
+  peers:
+    - id: '0'
+      host: localhost
+      port: '9310'
+    - id: '1'
+      host: localhost
+      port: '9311'
+    - id: '2'
+      host: localhost
+      port: '9312'
+    - id: '3'
+      host: localhost
+      port: '9313'
+
+info:
+  app:
+    name: 'Key Value State Storage Server 3'
+    version: '1.0'
+    description: 'Key Value State Storage Server 3'

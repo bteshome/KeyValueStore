@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Storage-local1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.bteshome.keyvaluestore.storage.StorageServerApplication" />
+    <module name="kvs-storage-server" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local,local1" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.bteshome.keyvaluestore.storage.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+      <option name="credential" />
+      <option name="region" />
+      <option name="useCurrentConnection" value="false" />
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
